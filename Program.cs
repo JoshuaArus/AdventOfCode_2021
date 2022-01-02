@@ -19,9 +19,9 @@ namespace AdventOfCode
                     .Select(t => t.FullName)
                     .Where(s => Regex.IsMatch(s, classRegex)))
             {
-                Console.WriteLine(classe);
                 try
                 {
+                    Console.WriteLine(classe.Split('.').Last().ToUpper());
                     Activator.CreateInstance(null, classe);
                 }
                 catch (Exception)
