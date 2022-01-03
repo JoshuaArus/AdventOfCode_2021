@@ -11,7 +11,7 @@ namespace AdventOfCode
         {
             int[] crabsPositions = System.IO.File.ReadAllLines(@"input_7.txt").First().Split(",").Select(n => Convert.ToInt32(n)).OrderBy(n => n).ToArray();
             gold(crabsPositions);
-            silver(crabsPositions);
+            // silver(crabsPositions); // too slow
         }
 
         public void gold(int[] crabsPositions)
