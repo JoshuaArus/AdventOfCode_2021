@@ -11,7 +11,7 @@ namespace AdventOfCode
         {
             int[] crabsPositions = System.IO.File.ReadAllLines(@"input_7.txt").First().Split(",").Select(n => Convert.ToInt32(n)).OrderBy(n => n).ToArray();
             gold(crabsPositions);
-            // silver(crabsPositions); // too slow
+            silver(crabsPositions); // too slow
         }
 
         public void gold(int[] crabsPositions)
@@ -37,6 +37,9 @@ namespace AdventOfCode
 
         public void silver(int[] crabsPositions)
         {
+            Console.WriteLine("silver : TOO SLOW");
+            return;
+
             int minPos = crabsPositions.First();
             int maxPos = crabsPositions.Last();
 
